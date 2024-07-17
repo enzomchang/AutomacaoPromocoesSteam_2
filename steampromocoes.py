@@ -1,6 +1,12 @@
 """ AUTOMAÇÃO PARA PEGAR AS PRINCIPAIS PROMOÇÕES DA STEAM NA SEMANA E ENVIAR EM FORMA DE PLANILHA PARA O E-MAIL AUTOMATIZADO."""
 
-""" Código agendado para executar automaticamente toda segunda feira 12:00 dia pelo agendador de tarefas. (No arquivo schedule.py explica como fazer isso) """
+""" Código agendado para executar automaticamente toda segunda feira 12:00 dia pelo agendador de tarefas.
+
+### COMO FAZER PARA AUTOMATIZAR NO AGENDADOR DE TAREFAS ###
+
+Agendador de Tarefas -> Criar Tarefa Básica -> Nome da Tarefa -> Disparador -> Avançar (Configurar Triggers, diariamente, semanalmente, etc) -> Ação -> Iniciar um Programa -> Programa Script (colocar o caminho do executável python.exe)  -> Argumentos (será o nome do seu script python) -> Iniciar em(caminho do script) -> OK
+
+"""
 
 """
 Meu objetivo é pegar as seguintes informações da Steam:
@@ -170,7 +176,7 @@ def enviar_email():
     pythoncom.CoInitialize()
     outlook = win32.Dispatch('outlook.application')
     email = outlook.CreateItem(0)
-    email.To = "email.exemplo@gmail.com" # Mudar de acordo com o e-mail que você quer que receba as promoções
+    email.To = "enzochang_@outlook.com" # Mudar de acordo com o e-mail que você quer que receba as promoções
     email.Subject = "Promoções Semanais da Steam"
     email.HTMLBody = f"""
     <p>Olá,</p>
@@ -197,7 +203,7 @@ navegador.quit()
 df = pd.DataFrame(dic_produtos)
 
 # Salvar o DataFrame em um arquivo Excel
-output_path = r'C:\Users\exemplo\Downloads\promocoes_steam.xlsx'  # Mudar de acordo com o seu caminho
+output_path = r'C:\Users\enzoc\Downloads\promocoes_steam.xlsx'  # Mudar de acordo com o seu caminho
 df.to_excel(output_path, index=False)
 
 # Chamar Função enviar e-mail
