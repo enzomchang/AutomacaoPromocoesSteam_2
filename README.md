@@ -11,4 +11,4 @@ Agendador de Tarefas -> Criar Tarefa -> Configurar Geral e Configurar Triggers (
 
 - Mudar o caminho do dataframe que será salvo para enviar por anexo
 
-- Agendar a tarefa de acordo com o que você quer que seja realizado o webscraping
+- Agendar a tarefa de acordo com o horário/dia que você quer que seja realizado o webscraping
