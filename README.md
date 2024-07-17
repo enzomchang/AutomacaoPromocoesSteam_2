@@ -3,7 +3,7 @@ Programa que executa semanalmente (segunda feira 12:00) uma automação para peg
 
 *MÉTODO UTILIZANDO O AGENDADOR DE TAREFAS*
 - Portanto, você irá precisar realizar os seguintes passos:
-Agendador de Tarefas -> Criar Tarefa -> Configurar Geral e Configurar Triggers (diariamente, semanalmente, etc) -> OK
+Agendador de Tarefas -> Criar Tarefa Básica -> Nome da Tarefa -> Disparador -> Avançar (Configurar Triggers, diariamente, semanalmente, etc) -> Ação -> Iniciar um Programa -> Programa Script (colocar o caminho do executável python.exe)  -> Argumentos (será o nome do seu script python) -> Iniciar em(caminho do script) -> OK
 
  *Mudanças realizadas no código necessárias para cada usuário:* ( Estou sinalizando no código também )
 
