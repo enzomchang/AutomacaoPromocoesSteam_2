@@ -176,7 +176,7 @@ def enviar_email():
     pythoncom.CoInitialize()
     outlook = win32.Dispatch('outlook.application')
     email = outlook.CreateItem(0)
-    email.To = "enzochang_@outlook.com" # Mudar de acordo com o e-mail que você quer que receba as promoções
+    email.To = "exemplo@gmail.com" # Mudar de acordo com o e-mail que você quer que receba as promoções
     email.Subject = "Promoções Semanais da Steam"
     email.HTMLBody = f"""
     <p>Olá,</p>
@@ -203,7 +203,7 @@ navegador.quit()
 df = pd.DataFrame(dic_produtos)
 
 # Salvar o DataFrame em um arquivo Excel
-output_path = r'C:\Users\enzoc\Downloads\promocoes_steam.xlsx'  # Mudar de acordo com o seu caminho
+output_path = r'C:\Users\exemplo\Downloads\promocoes_steam.xlsx'  # Mudar de acordo com o seu caminho
 df.to_excel(output_path, index=False)
 
 # Chamar Função enviar e-mail
